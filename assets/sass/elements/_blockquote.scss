@@ -1,0 +1,35 @@
+@use "sass:math";
+@use "../core/variables";
+
+/* ==========================================================================
+    #blockquote
+   ========================================================================== */
+
+/*doc
+---
+title: blockquote
+---
+
+```
+<blockquote class="e-blockquote">
+  引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト引用テキスト
+</blockquote>
+```
+*/
+
+
+.e-blockquote {
+  line-height: 1.7;
+  position: relative;
+  margin-bottom: variables.$base-spacing;
+  margin-left: 10px;
+  padding: .5em 15px;
+  color: variables.$secondary-text;
+  border-left: 5px solid variables.$primary-color;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-blockquote {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}

@@ -1,0 +1,77 @@
+@use "sass:color";
+
+// grid
+$portrait: 375px;
+$landscape: 767px;
+$desktop: 1192px;
+
+// Width
+$max-width: 1600px;
+$main-width: 1192px;
+$container-width: 1192px;
+$primary-width: 842px;
+$secondary-width: 300px;
+
+// Base Colors
+$primary-light-color: #b2ebf2;
+$primary-color: #00bcd4;
+$primary-dark-color: #0097a7;
+
+// Accent Colors
+$accent-color: #ff9800;
+$secondary-color: #ed82f6;
+$secondary-dark-color: #ed82f6;
+
+//Text Color
+$primary-text: #212121;
+$secondary-text: rgba(0, 0, 0, 0.6);
+$disabled-text: rgba(0, 0, 0, 0.38);
+$dividers: #dedede;
+
+$dark-primary-text: rgba(255, 255, 255, 100);
+$dark-secondary-text: rgba(255, 255, 255, 0.7);
+$dark-disabled-text: rgba(255, 255, 255, 0.3);
+$dark-dividers: rgba(255, 255, 255, 0.2);
+
+//Link Color
+$link-text: #007eeb;
+$hover-text: color.adjust($link-text, $alpha: -0.4);
+$active-text: color.adjust($link-text, $alpha: -0.4);
+
+//Other Color
+$success-color: #7c9e36;
+$info-color: #4a90b9;
+$warning-color: #f5ba4e;
+$important-color: #d51313;
+
+// Focus
+$focus-outline-color: color.adjust($link-text, $alpha: -0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Spacing Sizes
+$base-gap: 16px;
+$base-gap-landscape: 16px;
+
+$base-spacing: 20px;
+$base-spacing-landscape: 30px;
+
+// Radius
+$base-radius: 4px;
+$base-radius-landscape: 4px;
+
+// Font Size
+$base-font-size: 16px;
+$base-font-size-landscape: 14px;
+
+$base-line-height: 1.5;
+$base-line-height-landscape: 1.7;
+
+// Font family
+$my-font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Helvetica Neue",
+  Arial, Meiryo, sans-serif;

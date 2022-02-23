@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>スタイルガイド | Orca</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <link rel="canonical" href="/utility/styleguide.html">
+  <meta name="description" content="ディスクリプション">
+  <meta property="og:image" content="/assets/img/og-image/og-image.png">
+  <meta property="og:url" content="/utility/styleguide.html">
+  <meta property="og:title" content="スタイルガイド|Orca">
+  <meta property="og:description" content="ディスクリプション">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+  <script src="/assets/js/vendor.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/bundle.css" media="all">
+</head>
+
+<body id="skippy">
+<header id="header" class="l-header">
+  <div class="l-header_pc">
+    <div class="l-header_primary-pc">
+      <p class="l-header_logo"><a href="/"><img src="/assets/img/common/logo.png" width="190" height="50" alt="ロゴ"></a></p>
+      <div>
+        <p class="l-header_tel"><span>TEL</span><a href="tel:1234567890">123-456-7890</a></p>
+        <div class="l-header_sub-nav">
+          <ul>
+            <li><a href="/" target="_blank" rel="noopener">ヘッダーナビ</a></li>
+            <li><a href="/">ヘッダーナビ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="l-header_secondary-pc">
+      <nav class="l-header_nav" aria-label="デスクトップ用サイト全体のメニュー">
+        <ul>
+          <li><a href="/">ナビ</a></li>
+          <li><a href="/">ナビ</a></li>
+          <li><a href="/">ナビ</a></li>
+          <li><a href="/">ナビ</a></li>
+          <li><a href="/">ナビ</a></li>
+          <li><a href="/">ナビ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="l-header_sp">
+    <div class="l-header_primary-sp">
+      <div class="l-header_order2">
+        <p class="l-header_logo"><a href="/"><img src="/assets/img/common/logo.png" width="190" height="50" alt="ロゴ"></a></p>
+      </div>
+      <div class="l-header_order1">
+        <div class="l-header_nav-control">
+          <button
+            type="button"
+            aria-controls="aria-offcanvas"
+            aria-expanded="false"
+            aria-label="開く"
+            data-toggle-offcanvas>
+            <span class="l-header_nav-control-icon"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+      <div class="l-header_order3"><p class="l-header_tel"><a href="tel:1234567890"><span
+        class="material-icons">phone</span></a></p></div>
+    </div>
+    <div class="l-header_secondary-sp">
+      <div class="l-header_nav" aria-hidden="true" data-body-offcanvas>
+        <div id="aria-offcanvas" class="_nav-body">
+          <nav aria-label="スマートフォン用サイト全体のメニュー">
+            <ul class="l-header_nav-list">
+              <li><a href="/">ナビ</a></li>
+              <li><a href="/">ナビ</a></li>
+              <li><a href="/">ナビ</a></li>
+              <li><a href="/">ナビ</a></li>
+              <li><a href="/">ナビ</a></li>
+              <li><a href="/">ナビ</a></li>
+              <li><a href="/" target="_blank" rel="noopener">ヘッダーナビ</a></li>
+              <li><a href="/">ヘッダーナビ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="js-offcanvas-bg"></div>
+    </div>
+  </div>
+</header>
+
+
+<main id="main" class="l-main">
+
+  <div class="c-breadcrumb" role="navigation" aria-label="現在地表示">
+    <div class="c-breadcrumb_inner">
+      <span><a href="/">ホーム</a></span>
+      <span>スタイルガイド</span>
+    </div>
+  </div>
+  <div class="l-container">
+    <section class="l-container_primary">
+
+      <div class="l-block">
+        <h1 id="components" class="e-heading1">Components</h1>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Breadcrumb</h2>
+          <div class="c-breadcrumb" role="navigation" aria-label="現在地表示">
+            <div class="c-breadcrumb_inner">
+              <span><a href="/">ホーム</a></span>
+              <span><a href="/category/">カテゴリー</a></span>
+              <span>ページタイトル</span>
+            </div>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-breadcrumb>.c-breadcrumb_inner>(span>a)*2+span</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Card</h2>
+          <div class="c-card" style="max-width: 300px">
+            <a href="#skippy" class="c-card_link">
+              <figure class="c-card_img"><img src="/assets/img/dummy/card.png" width="344" height="229" alt="ダミー">
+              </figure>
+              <div class="c-card_body">
+                <h3 class="c-card_title">ページタイトル</h3>
+                <p class="c-card_text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </a>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd>
+              <code>.c-card>a.c-card_link>(figure.c-card_img>img)+(div.c-card_body>h2.c-card_title+p.c-card_text)</code>
+            </dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Headline</h2>
+          <ul class="c-headline">
+            <li class="c-headline_item">
+              <time class="c-headline_date" datetime="2021-01-01">2021年01月01日</time>
+              <p class="c-headline_title"><a
+                href="#skippy">ニュースタイトルが入りますニュースタイトルが入ります。ニュースタイトルが入りますニュースタイトルが入ります。</a><span class="is-headline-new">New</span>
+              </p>
+            </li>
+            <li class="c-headline_item">
+              <time class="c-headline_date" datetime="2021-01-01">2021年01月01日</time>
+              <p class="c-headline_title"><a href="#skippy">ニュースタイトルが入りますニュースタイトルが入ります。ニュースタイトルが入りますニュースタイトルが入ります。</a>
+              </p>
+            </li>
+            <li class="c-headline_item">
+              <time class="c-headline_date" datetime="2021-01-01">2021年01月01日</time>
+              <p class="c-headline_title"><a href="#skippy">ニュースタイトルが入りますニュースタイトルが入ります。ニュースタイトルが入りますニュースタイトルが入ります。</a>
+              </p>
+            </li>
+          </ul>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>ul.c-headline>li.c-headline_item>time.c-headline_date+p.c-headline_title>a</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">MainVisual</h2>
+          <div class="c-main-visual">
+            <div class="c-main-visual_inner">
+              <h1 class="c-main-visual_title">MainVisual</h1>
+              <div class="c-main-visual_img">
+                <img src="/assets/img/dummy/mian_visual.png" alt="ダミー" width="1192" height="500">
+              </div>
+            </div>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-main-visual>.c-main-visual_inner>h1.c-main-visual_title+.c-main-visual_img>img</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Media</h2>
+          <div class="c-media">
+            <a href="#skippy">
+              <figure class="c-media_img"><img src="/assets/img/dummy/media.png" width="110" height="110" alt="ダミー">
+              </figure>
+              <div class="c-media_body">
+                <h2 class="c-media_title">ページタイトル</h2>
+                <p class="c-media_text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </a>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-media>a>(figure.c-media_img>img)+(div.c-media_body>h2.c-media_title+p.c-media_text)</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Menu</h2>
+          <div class="c-menu">
+            <h3 class="c-menu_title">カテゴリー名</h3>
+            <ul class="c-menu_list">
+              <li><a href="#skippy">タイトル</a>
+                <ul class="c-menu_list">
+                  <li><a href="#skippy" class="is-active">タイトル</a></li>
+                  <li><a href="#skippy">タイトル</a></li>
+                  <li><a href="#skippy">タイトル</a></li>
+                </ul>
+              </li>
+              <li><a href="#skippy">タイトル</a></li>
+              <li><a href="#skippy">タイトル</a></li>
+            </ul>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-menu>h3.c-menu_title+ul.c-menu_list>li*3</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Pagenavi</h2>
+          <div class="c-pagenavi">
+            <p class="c-pagenavi_title">100件中　11 - 20件表示</p>
+            <div class="c-pagenavi_body">
+              <span class="c-pagenavi_prev is-paginavi-disabled" rel="prev"><span
+                class="material-icons">chevron_left</span></span>
+              <span class="is-pagenavi_current">1</span>
+              <a class="c-pagenavi_item" href="#skippy">2</a>
+              <a class="c-pagenavi_item" href="#skippy">3</a>
+              <a class="c-pagenavi_item" href="#skippy">4</a>
+              <span class="c-pagenavi_extend">...</span>
+              <a class="c-pagenavi_item" href="#skippy">10</a>
+              <a class="c-pagenavi_next" rel="next" href="#skippy"><span class="material-icons">chevron_right</span></a>
+            </div>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-pagenavi>.c-pagenavi_title+.c-pagenavi_body>(span.c-pagenavi_prev+span.is-pagenavi_current+a.c-pagenavi_item+span.c-pagenavi_extend+a.c-pagenavi_next)</code>
+            </dd>
+          </dl>
+          <div class="c-pager">
+            <ul class="c-pager_inner">
+              <li class="c-pager_prev"><a href="#skippy" class="is-disabled"><i class="material-icons">chevron_left</i>
+                前へ</a></li>
+              <li class="c-pager_to-list"><a href="#skippy">一覧</a></li>
+              <li class="c-pager_next"><a href="#skippy">次へ<i class="material-icons">chevron_right</i></a></li>
+            </ul>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-pager>ul.c-pager_inner>li.c-pager_prev+li.c-pager_to-list+li.c-pager_next</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Search</h2>
+          <div class="c-search" role="search" id="search">
+            <div class="c-search_body">
+              <p class="c-search_title">検索キーワード</p>
+              <input type="text" name="#" class="c-search_input" value="ニュースタイトル" aria-labelledby="search"
+                     placeholder="キーワードを入力してください" autocomplete="off" aria-autocomplete="list" role="textbox">
+              <button type="submit" class="c-search_button"><i class="material-icons">search</i></button>
+            </div>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.c-search>.c-search_body>.c-search_title+input.c-search_input+button.c-search_button</code></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="l-block">
+        <h1 id="elements" class="e-heading1">Elements</h1>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Blockquote</h2>
+          <blockquote class="e-blockquote">
+            引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。引用テキストが入ります。
+          </blockquote>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-blockquote</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Button</h2>
+          <h3 class="styleguide-sub-heading">大</h3>
+          <div class="e-button is-button-lg">
+            <button type="button">テキスト</button>
+          </div>
+          <h3 class="styleguide-sub-heading">中</h3>
+          <div class="e-button">
+            <button type="button">テキスト</button>
+          </div>
+          <h3 class="styleguide-sub-heading">小</h3>
+          <div class="e-button is-button-sm">
+            <button type="button">テキスト</button>
+          </div>
+          <h3 class="styleguide-sub-heading">無効</h3>
+          <div class="e-button is-button-disabled">
+            <button type="button">テキスト</button>
+          </div>
+          <h3 class="styleguide-sub-heading">位置</h3>
+          <div class="e-button is-button-accent is-button-lg">
+            <button type="button">テキスト</button>
+          </div>
+          <div class="e-button is-button-primary is-button-lg is-button-center">
+            <button type="button">テキスト</button>
+          </div>
+          <div class="e-button is-button-lg is-button-right">
+            <button type="button">テキスト</button>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-button>a</code></dd>
+            <dd><code>.e-button>button</code></dd>
+            <dt>Coler :</dt>
+            <dd><code>.is-button-primary</code></dd>
+            <dd><code>.is-button-accent</code></dd>
+            <dt>Position :</dt>
+            <dd><code>.is-button-left</code></dd>
+            <dd><code>.is-button-center</code></dd>
+            <dd><code>.is-button-right</code></dd>
+            <dt>Size :</dt>
+            <dd><code>.is-button-sm</code></dd>
+            <dd><code>.is-button-lg</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Dividers</h2>
+          <hr class="e-divider">
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-divider</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Q&A</h2>
+          <div class="e-faq">
+            <h3 class="e-faq_title">タイトル</h3>
+            <div class="e-faq_body">
+              <p>テキストテキストテキストテキストテキストテキストテキスト<br>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+          <div class="e-faq">
+            <h3 class="e-faq_title">タイトル</h3>
+            <div class="e-faq_body">
+              <p>テキストテキストテキストテキストテキストテキストテキスト<br>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+          <div class="e-faq">
+            <h3 class="e-faq_title">タイトル</h3>
+            <div class="e-faq_body">
+              <p>テキストテキストテキストテキストテキストテキストテキスト<br>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-faq>.e-faq_title+.e-faq_body</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Form</h2>
+          <form>
+            <table class="e-form-table">
+              <caption class="sr-only">お問い合わせフォームテーブル</caption>
+              <tr>
+                <th><label for="">お名前<span class="e-form-req">必須</span></label></th>
+                <td>
+                  <div class="e-form-row is-form-break">
+                    <div class="e-form-col-6">
+                      <input type="text" name="" value="" class="e-form-control is-error" placeholder="姓">
+                      <div class="e-form-message-box is-error">
+                        <p class="e-form-error-text">姓を入力してください。</p>
+                      </div>
+                    </div>
+                    <div class="e-form-col-6">
+                      <input type="text" name="" value="" class="e-form-control is-valid" placeholder="名">
+                      <div class="e-form-message-box">
+                        <p class="e-form-error-text">名を入力してください。</p>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="">メールアドレス<span class="e-form-req">必須</span></label>
+                </th>
+                <td>
+                  <div class="e-form-row is-form-break">
+                    <div class="e-form-col-6">
+                      <input type="text" name="" value="" class="e-form-control is-error">
+                      <div class="e-form-message-box is-error">
+                        <p class="e-form-error-text">メールアドレスを入力してください。</p>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>年齢</th>
+                <td>
+                  <div class="e-form-row">
+                    <div class="e-form-col-12">
+                      <fieldset>
+                        <legend class="sr-only">年齢</legend>
+                        <ul class="e-form-rc-box" id="age">
+                          <li>
+                            <input checked type="radio" class="e-form-control is-valid" name="age" id="age20"
+                                   value="20代">
+                            <label for="age20">20代</label>
+                            <span class="validate-rc-icon"></span>
+                          </li>
+                          <li>
+                            <input type="radio" class="e-form-control" name="age" id="age30" value="30代">
+                            <label for="age30">30代</label>
+                          </li>
+                          <li>
+                            <input type="radio" class="e-form-control" name="age" id="age40" value="40代">
+                            <label for="age40">40代</label>
+                          </li>
+                        </ul>
+                      </fieldset>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>よく使う検索エンジン <span class="e-form-req">必須</span></th>
+                <td>
+                  <div class="e-form-row">
+                    <div class="e-form-col-12">
+                      <fieldset>
+                        <legend class="sr-only">よく使う検索エンジン</legend>
+                        <ul class="e-form-rc-box is-form-rc-box-ib" id="use">
+                          <li>
+                            <input type="checkbox" name="use" class="is-error e-form-control" value="Google" id="use1">
+                            <label for="use1">Google</label>
+                            <span class="validate-rc-icon"></span>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="use" class="e-form-control" value="Yahoo" id="use2">
+                            <label for="use2">Yahoo!</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="use" class="e-form-control" value="Bing" id="use3">
+                            <label for="use3">Bing</label>
+                          </li>
+                        </ul>
+                      </fieldset>
+                      <div class="e-form-message-box is-error">
+                        <p class="e-form-error-text">選択してください。</p>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="business">ご用件 </label></th>
+                <td>
+                  <div class="e-form-row is-form-break">
+                    <div class="e-form-col-8">
+                      <select id="business" name="business" value="" class="e-form-control">
+                        <optgroup label="ご用件">
+                          <option value="" selected="selected">選択してください</option>
+                          <option value="">用件1</option>
+                          <option value="">用件2</option>
+                          <option value="">用件3</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="">お問い合わせの内容<span class="e-form-req">必須</span></label>
+                </th>
+                <td>
+                  <div class="e-form-row">
+                    <div class="e-form-col-12">
+                      <textarea name="" cols="40" rows="10" class="e-form-control is-error"
+                                placeholder="具体的な内容をご記入ください"></textarea>
+
+                      <div class="e-form-message-box is-error">
+                        <p class="e-form-error-text">お問い合わせ内容を入力してください。</p>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="e-button-row">
+              <div class="e-button-col e-button is-button-accent  is-button-lg">
+                <button type="submit">確認画面へ</button>
+              </div>
+            </div>
+          </form>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>table.e-form-table</code></dd>
+            <dd><code>input.e-form-control</code></dd>
+            <dd><code>select.e-form-control</code></dd>
+            <dd><code>
+              ul.e-form-rc-box>(li>input[type="radio"].e-form-control.is-error+label+span.validate-rc-icon)+(li>input[type="radio"].e-form-control+label)*2</code>
+            </dd>
+            <dd><code>
+              ul.e-form-rc-box>(li>input[type="checkbox"].e-form-control.is-error+label+span.validate-rc-icon)+(li>input[type="checkbox"].e-form-control+label)*2</code>
+            </dd>
+            <dd><code>textarea.e-form-control</code></dd>
+            <dt>Grid :</dt>
+            <dd><code>.e-form-row>.e-form-col-4</code></dd>
+            <dd><code>.e-form-col-6</code></dd>
+            <dd><code>.e-form-col-8</code></dd>
+            <dd><code>.e-form-col-12</code></dd>
+            <dt>Utility :</dt>
+            <dd><code>.e-form-req</code></dd>
+            <dd><code>.e-form-any</code></dd>
+            <dd><code>input.is-error</code></dd>
+            <dd><code>.e-form-message-box.is-error>.e-form-error-text</code></dd>
+            <dd><code>.is-form-rc-box-ib</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Heading</h2>
+          <h1 class="e-heading1">見出し1</h1>
+          <h2 class="e-heading2">見出し2</h2>
+          <h3 class="e-heading3">見出し3</h3>
+          <h4 class="e-heading4">見出し4</h4>
+          <h5 class="e-heading5">見出し5</h5>
+          <h6 class="e-heading6">見出し6</h6>
+          <h2 class="e-heading2 is-heading-bg is-heading-color-white">見出し大</h2>
+          <h3 class="e-heading3 is-heading-stripe">見出し中</h3>
+          <h4 class="e-heading4 is-heading-bdt">見出し小1</h4>
+          <h5 class="e-heading5 is-heading-bdl is-heading-color">見出し小2</h5>
+          <h6 class="e-heading6 is-heading-bdb">見出し小3</h6>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-heading2</code></dd>
+            <dd><code>.e-heading3</code></dd>
+            <dd><code>.e-heading4</code></dd>
+            <dt>Utility :</dt>
+            <dd><code>.is-heading-left</code></dd>
+            <dd><code>.is-heading-right</code></dd>
+            <dd><code>.is-heading-center</code></dd>
+            <dd><code>.is-heading-stripe</code></dd>
+            <dd><code>.is-heading-bdl</code></dd>
+            <dd><code>.is-heading-bdb</code></dd>
+            <dd><code>.is-heading-bg</code></dd>
+            <dd><code>.is-heading-color</code></dd>
+            <dd><code>.is-heading-color-white</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Img</h2>
+          <figure class="e-img">
+            <a href="#skippy">
+              <img src="/assets/img/dummy/img.png" alt="ダミー" title="" width="100%">
+            </a>
+            <figcaption class="e-img_caption">キャプション</figcaption>
+          </figure>
+          <figure class="e-img is-img-left is-img-33p">
+            <a href="#skippy">
+              <img src="/assets/img/dummy/img.png" alt="ダミー" title="" width="100%">
+            </a>
+          </figure>
+          <p class="e-text">
+            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+          <p class="e-text">
+            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+            ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+          <div class="is-row">
+            <div class="is-col-6">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー画像" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-6">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-3">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-3">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-3">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-3">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-4">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-4">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-4">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-4">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+            <div class="is-col-8 e-img">
+              <div class="e-img">
+                <a href="#skippy">
+                  <img src="/assets/img/dummy/card.png" alt="ダミー" title="" width="100%">
+                </a>
+              </div>
+            </div>
+          </div>
+          <ul class="e-img-list" style="max-width: 300px">
+            <li><a href="#skippy"><img src="/assets/img/dummy/widget.png" width="300" height="70" alt="ダミー"> </a></li>
+            <li><a href="#skippy"><img src="/assets/img/dummy/widget.png" width="300" height="70" alt="ダミー"> </a></li>
+            <li><a href="#skippy"><img src="/assets/img/dummy/widget.png" width="300" height="70" alt="ダミー"> </a></li>
+          </ul>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-img</code></dd>
+            <dd><code>ul.e-img-list>li</code></dd>
+            <dt>Grid :</dt>
+            <dd><code>.is-row>.is-col-4</code></dd>
+            <dd><code>.is-col-6</code></dd>
+            <dd><code>.is-col-8</code></dd>
+            <dd><code>.is-col-12</code></dd>
+            <dt>Size :</dt>
+            <dd><code>.is-img-33p</code></dd>
+            <dd><code>.is-img-50p</code></dd>
+            <dd><code>.is-img-75p</code></dd>
+            <dd><code>.is-img-100p</code></dd>
+            <dt>Utility :</dt>
+            <dd><code>.is-img-left</code></dd>
+            <dd><code>.is-img-right</code></dd>
+            <dd><code>.is-img-center</code></dd>
+            <dd><code>.is-img-clear</code></dd>
+            ></dd>
+            <dt>Utility :</dt>
+            <dd><code>.is-img-left</code></dd>
+            <dd><code>.is-img-right</code></dd>
+            <dd><code>.is-img-center</code></dd>
+            <dd><code>.is-img-clear</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Lists</h2>
+          <h3 class="styleguide-sub-heading">順序なしリスト</h3>
+          <ul class="e-list-disc">
+            <li>順序なしリスト順序なしリスト順序なしリスト順序なしリスト</li>
+            <li>順序なしリスト順序なしリスト順序なしリスト順序なしリスト</li>
+            <li>順序なしリスト順序なしリスト順序なしリスト順序なしリスト</li>
+            <li>順序なしリスト順序なしリスト順序なしリスト順序なしリスト</li>
+          </ul>
+          <h3 class="styleguide-sub-heading">番号付きリスト</h3>
+          <ol class="e-list-decimal">
+            <li>番号付きリスト番号付きリスト番号付きリスト番号付きリスト</li>
+            <li>番号付きリスト番号付きリスト番号付きリスト番号付きリスト</li>
+            <li>番号付きリスト番号付きリスト番号付きリスト番号付きリスト</li>
+            <li>番号付きリスト番号付きリスト番号付きリスト番号付きリスト</li>
+          </ol>
+          <h3 class="styleguide-sub-heading">矢印付きリスト</h3>
+          <ul class="e-list-arrow">
+            <li>矢印付きリスト矢印付きリスト矢印付きリスト矢印付きリスト</li>
+            <li>矢印付きリスト矢印付きリスト矢印付きリスト矢印付きリスト</li>
+            <li>矢印付きリスト矢印付きリスト矢印付きリスト矢印付きリスト</li>
+            <li>矢印付きリスト矢印付きリスト矢印付きリスト矢印付きリスト</li>
+          </ul>
+          <h3 class="styleguide-sub-heading">説明リスト</h3>
+          <dl class="e-list-dl">
+            <dt>説明リスト説明リスト</dt>
+            <dd>説明リスト説明リスト説明リスト説明リスト</dd>
+            <dd>説明リスト説明リスト説明リスト説明リスト</dd>
+            <dt>説明リスト説明リスト</dt>
+            <dd>説明リスト説明リスト説明リスト説明リスト</dd>
+            <dt>説明リスト説明リスト</dt>
+            <dd>説明リスト説明リスト説明リスト説明リスト</dd>
+            <dd>説明リスト説明リスト説明リスト説明リスト</dd>
+          </dl>
+          <h3 class="styleguide-sub-heading">インラインリスト</h3>
+          <ul class="e-list-inline">
+            <li><a href="#skippy">リスト</a></li>
+            <li><a href="#skippy">リスト</a></li>
+            <li><a href="#skippy">リスト</a></li>
+            <li><a href="#skippy">リスト</a></li>
+            <li><a href="#skippy">リスト</a></li>
+          </ul>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>ul.e-list-disc>li</code></dd>
+            <dd><code>ol.e-list-decimal>li</code></dd>
+            <dd><code>ul.e-list-inline>li</code></dd>
+            <dd><code>dl.e-list-dl>dt+dd</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Table</h2>
+          <h3 class="styleguide-sub-heading">デフォルト</h3>
+          <table class="e-table">
+            <caption class="sr-only">デフォルト</caption>
+            <tr>
+              <th>見出し</th>
+              <th>見出し</th>
+              <th>見出し</th>
+            </tr>
+            <tr>
+              <td>テキストが入ります</td>
+              <td>テキストが入りますテキストが入りますテキストが入ります</td>
+              <td>テキストが入ります</td>
+            </tr>
+            <tr>
+              <td>テキストが入ります</td>
+              <td>テキストが入りますテキストが入りますテキストが入ります</td>
+              <td>テキストが入ります</td>
+            </tr>
+          </table>
+          <h3 class="styleguide-sub-heading">縦線なし</h3>
+          <table class="e-table is-table-borderless">
+            <caption class="sr-only">縦線なし</caption>
+            <tr>
+              <th class="is-cell-10p">見出し</th>
+              <th>見出し</th>
+              <th>見出し</th>
+            </tr>
+            <tr>
+              <td>テキストが入ります</td>
+              <td>テキストが入りますテキストが入りますテキストが入ります</td>
+              <td>テキストが入ります</td>
+            </tr>
+            <tr>
+              <td>テキストが入ります</td>
+              <td>テキストが入りますテキストが入りますテキストが入ります</td>
+              <td>テキストが入ります</td>
+            </tr>
+          </table>
+          <h3 class="styleguide-sub-heading">SP時ブロック</h3>
+          <table class="e-table is-table-sp-block">
+            <caption class="sr-only">SP時ブロック</caption>
+            <tr>
+              <th class="is-cell-15p">見出し</th>
+              <td>テキストが入ります</td>
+            </tr>
+            <tr>
+              <th>見出し</th>
+              <td>テキストが入ります</td>
+            </tr>
+          </table>
+          <h3 class="styleguide-sub-heading">SP時スクロール</h3>
+          <div class="is-responsive-table">
+            <table class="e-table">
+              <caption class="sr-only">SP時スクロール</caption>
+              <tr>
+                <th class="is-cell-10p">タイトル10%</th>
+                <th class="is-cell-15p">タイトル15%</th>
+                <th class="is-cell-20p">タイトル20%</th>
+                <th>タイトル</th>
+                <th>タイトル</th>
+                <th>タイトル</th>
+              </tr>
+              <tr>
+                <td>テキストテキスト</td>
+                <td>テキストテキスト</td>
+                <td>テキストテキスト</td>
+                <td>テキストテキスト</td>
+                <td>テキストテキスト</td>
+                <td>テキストテキスト</td>
+              </tr>
+              <tr>
+                <td>テキスト</td>
+                <td>テキスト</td>
+                <td>テキスト</td>
+                <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+                <td>
+                  <div class="is-responsive-item-width-30vw">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト30vw</div>
+                </td>
+                <td>
+                  <div class="is-responsive-item-width-50vw">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト50vw</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-table</code></dd>
+            <dt>Utility :</dt>
+            <dd><code>.is-table-borderless</code></dd>
+            <dd><code>.is-table-sp-block</code></dd>
+            <dd><code>.is-responsive-table>.e-table</code></dd>
+            <dd><code>.is-cell-10p</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Tag</h2>
+          <ul class="e-tag-list">
+            <li class="e-tag"><a href="#skippy">タグ1</a></li>
+            <li class="e-tag"><a href="#skippy">タグ2</a></li>
+            <li class="e-tag"><a href="#skippy">タグ3</a></li>
+            <li class="e-tag"><a href="#skippy">タグ4</a></li>
+          </ul>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-tag>a</code></dd>
+            <dd><code>.e-tag-list>.e-tag</code></dd>
+          </dl>
+        </div>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">Video</h2>
+          <div class="e-video-container">
+            <iframe width="840" height="472" src="https://www.youtube.com/embed/MwlwcmF0hwo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="e-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.2207488201843!2d130.87737815098376!3d33.88396818055708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543c74ff6f72d7d%3A0x730e722e57c967a3!2z44G-44GX44GY44KB!5e0!3m2!1sja!2sjp!4v1625926796513!5m2!1sja!2sjp"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Googlemap"></iframe>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.e-video-container>iframe</code></dd>
+            <dd><code>.e-map>iframe</code></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="l-block">
+        <h1 id="utilities" class="e-heading1">Utilities</h1>
+        <div class="l-unit">
+          <h2 class="styleguide-heading">MarginBottom</h2>
+          <p>↓余白（小）</p>
+          <div class="is-mb" style="border: 1px solid #DDDDDD; margin-left: 10px; margin-right: 10px">
+            <p class="is-mb-sm"></p>
+          </div>
+          <p>↓余白（中）</p>
+          <div class="is-mb" style="border: 1px solid #DDDDDD; margin-left: 10px; margin-right: 10px">
+            <p class="is-mb"></p>
+          </div>
+          <p>↓余白（大）</p>
+          <div class="is-mb" style="border: 1px solid #DDDDDD; margin-left: 10px; margin-right: 10px">
+            <p class="is-mb-lg"></p>
+          </div>
+          <dl class="styleguide-dl">
+            <dt>Base :</dt>
+            <dd><code>.is-mb-sm</code></dd>
+            <dd><code>.is-mb</code></dd>
+            <dd><code>.is-mb-lg</code></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer id="footer" class="l-footer">
+  <div class="l-footer_primary">
+    <div class="l-footer_description l-footer_order2-sp">
+      <h2 class="l-footer_description-title">会社名</h2>
+      <p class="l-footer_description-text">〒000-0000<br>サンプル県サンプル区サンプル1-1-1<br>
+        TEL <a href="tel:xxx-xxx-xxxx">123-456-7890</a><br>
+        FAX 123-456-7890</p>
+    </div>
+    <div class="l-footer_nav l-footer_order1-sp">
+      <h3 class="l-footer_nav-title">メニュー</h3>
+      <nav class="l-footer_nav-body">
+        <ul>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+        </ul>
+        <ul>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+        </ul>
+        <ul>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+        </ul>
+        <ul>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+          <li><a href="/">ページタイトル</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="l-footer_secondary">
+    <div class="l-footer_copy"><p>© copyright text</p></div>
+  </div>
+</footer>
+<noscript>
+  <div class="is-prompt">
+    <p>お使いのブラウザではJavaScriptが無効に設定されているため、サイトを快適にご利用いただけないかもしれません。</p>
+  </div>
+</noscript>
+</body>
+</html>

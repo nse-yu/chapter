@@ -1,0 +1,398 @@
+@use "sass:math";
+@use "../core/variables";
+
+/* ==========================================================================
+    #divider
+   ========================================================================== */
+
+.e-form-control {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  transition: border-color variables.$base-duration variables.$base-timing, box-shadow variables.$base-duration variables.$base-timing;
+  vertical-align: middle;
+  color: variables.$primary-text;
+  border: 1px solid variables.$dividers;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  box-shadow: inset .3px .3px 2px rgba(0, 0, 0, .1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus,
+  &:hover {
+    background-color: #FAFAFA;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94CF;
+    outline: 0;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #868686;
+  }
+
+  &::-moz-input-placeholder {
+    color: #868686;
+  }
+
+  &::-ms-input-placeholder {
+    color: #868686;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input[type=file].e-form-control {
+  border-width: 0;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+.e-form-control[disabled],
+.e-form-control[readonly],
+fieldset[disabled] .e-form-control {
+  cursor: not-allowed;
+  background-color: #EEEEEE;
+}
+
+textarea.e-form-control {
+  height: auto;
+  resize: vertical;
+}
+
+select.e-form-control {
+  padding-right: 25px;
+  cursor: pointer;
+  text-align: left;
+  text-indent: .01px;
+  text-overflow: '';
+  background-image: url('../img/form/form_icon_select_top.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+
+  &:focus {
+    background-image: url("../img/form/form_icon_select_top.svg");
+  }
+}
+
+.e-form-row fieldset {
+  border: none;
+  padding: 0;
+}
+
+//radio, checkbox
+
+.e-form-rc-box {
+  position: relative;
+
+  > span,
+  > li,
+  > div {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 20px;
+    padding-right: 10px;
+    padding-left: 30px;
+  }
+
+  input {
+    position: absolute;
+    z-index: -1;
+    width: auto;
+    opacity: 0;
+  }
+
+  input + label:before {
+    position: absolute;
+    top: .1em;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-image: url('../img/form/form_icons.svg');
+  }
+
+  input:focus + label {
+    box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+  }
+
+  input:disabled + label {
+    opacity: .6;
+  }
+
+  input:checked + label {
+    color: #333;
+  }
+
+  //radio
+  input[type=radio] + label:before {
+    background-position: -40px -40px;
+  }
+
+  input[type=radio]:disabled + label:before {
+    background-position: -40px -70px;
+  }
+
+  input[type=radio]:checked + label:before {
+    background-position: -140px -40px;
+  }
+
+  input[type=radio]:disabled:checked + label:before {
+    background-position: -140px -70px;
+  }
+
+  //checkbox
+  input[type=checkbox] + label:before {
+    background-position: -40px -140px;
+  }
+
+  input[type=checkbox]:disabled + label:before {
+    background-position: -40px -110px;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    background-position: -140px -140px;
+  }
+
+  input[type=checkbox]:disabled:checked + label:before {
+    background-position: -140px -110px;
+  }
+
+}
+
+.is-form-rc-box-ib > div,
+.is-form-rc-box-ib > li,
+.is-form-rc-box-ib > span {
+  display: inline-block;
+}
+
+
+/*  tools
+   ========================================================================== */
+
+
+.e-form-table {
+  width: 100%;
+  margin-bottom: variables.$base-spacing;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-top: 1px solid variables.$dividers;
+}
+
+.e-form-table tr,
+.e-form-table td,
+.e-form-table th {
+  text-align: left;
+  vertical-align: top;
+  word-break: break-all;
+}
+
+.e-form-table th {
+  width: auto;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid variables.$dividers;
+  background-color: transparent;
+}
+
+.e-form-table td {
+  padding: 10px;
+  border-bottom: 1px solid variables.$dividers;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: variables.$landscape) {
+  .e-form-table th {
+    border-bottom: 0;
+  }
+  .e-form-table th,
+  .e-form-table td {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-form-table {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+  .e-form-table th {
+    width: 30%;
+    padding: 22px 16px;
+  }
+
+  .e-form-table td {
+    padding: 22px 16px;
+  }
+}
+
+
+//必須･任意
+.e-form-req,
+.e-form-any {
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1px 6px;
+  color: #FFFFFF;
+  border-radius: 2px;
+  background-color: variables.$important-color;
+}
+
+.e-form-any {
+  background-color: variables.$success-color;
+}
+
+.e-form-table .e-form-req,
+.e-form-table .e-form-any {
+  margin-left: 10px;
+}
+
+.e-form-message-box {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.e-form-error-text {
+  margin-top: .5em;
+  color: variables.$important-color;
+}
+
+//バリデーション
+.validate-rc-icon {
+  display: none;
+}
+
+.e-form-message-box {
+  display: none;
+}
+
+.e-form-message-box.is-error {
+  display: block;
+}
+
+.is-error {
+  color: variables.$important-color;
+  border-color: variables.$important-color;
+}
+
+.is-error.e-form-control {
+  padding-right: 30px;
+  background-color: #FFF0f5;
+  background-image: url('../img/form/form_icon_error.svg');
+  background-repeat: no-repeat;
+  background-position: 98% .5em;
+  background-size: 24px 24px;
+}
+
+.is-error ~ .validate-rc-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/form/form_icon_error.svg');
+  background-repeat: no-repeat;
+  background-position: 98% .5em;
+  background-size: 24px 24px;
+}
+
+
+.is-valid {
+  border-color: variables.$secondary-color;
+}
+
+.is-valid　 ~ .validate-rc-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/form/form_icon_done.svg');
+  background-repeat: no-repeat;
+  background-position: 98% .5em;
+  background-size: 24px 24px;
+}
+
+.is-valid.e-form-control {
+  padding-right: 30px;
+  background-image: url('../img/form/form_icon_done.svg');
+  background-repeat: no-repeat;
+  background-position: 98% .5em;
+  background-size: 24px 24px;
+}
+
+
+/*  grid
+   ========================================================================== */
+
+$grid_ratio: ((32px / 2) /  variables.$container-width);
+$grid_gap: (math.floor($grid_ratio * 100% * 1000) /  1000);
+
+.e-form-row {
+  display: flex;
+  clear: both;
+  margin-right: -$grid_gap;
+  margin-bottom: -10px;
+  margin-left: -$grid_gap;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+
+[class*='e-form-col-'] {
+  display: block;
+  box-sizing: border-box;
+  margin-right: $grid_gap;
+  margin-bottom: 10px;
+  margin-left: $grid_gap;
+  align-self: stretch;
+}
+
+[class*='e-form-col-'] > *:last-child {
+  margin-bottom: 0;
+}
+
+.e-form-col-3 {
+  flex: 0 0 (100 / 12) * 3 - ($grid_gap * 2);
+}
+
+.e-form-col-4 {
+  flex: 0 0 (100 / 12) * 4 - ($grid_gap * 2);
+}
+
+.e-form-col-6 {
+  flex: 0 0 (100 / 12) * 6 - ($grid_gap * 2);
+}
+
+.e-form-col-8 {
+  flex: 0 0 (100 / 12) * 8 - ($grid_gap * 2);
+}
+
+.e-form-col-12 {
+  flex: 0 0 (100 / 12) * 12 - ($grid_gap * 2);
+}
+
+@media only screen and (max-width: variables.$landscape) {
+  .is-form-break.e-form-row {
+    display: block;
+  }
+}

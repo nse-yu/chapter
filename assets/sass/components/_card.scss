@@ -1,0 +1,133 @@
+@use "../core/variables";
+
+/* ==========================================================================
+   #card
+   ========================================================================== */
+
+/*doc
+---
+title: card
+---
+
+```html_example
+
+<div class="c-card">
+  <a href="" class="c-card_link">
+    <figure class="c-card_img"><img src="/assets/img/dummy/card.png" width="344" height="229" alt=""></figure>
+    <div class="c-card_body">
+      <h3 class="c-card_title">ページタイトル</h3>
+      <p class="c-card_text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    </div>
+  </a>
+</div>
+
+```
+
+*/
+
+.c-card {
+  margin-right: auto;
+  margin-bottom: variables.$base-spacing;
+  margin-left: auto;
+}
+
+.c-card_link,
+.c-card > a {
+  display: block;
+  height: 100%;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .c-card {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}
+
+.c-card_link:hover,
+.c-card > a:hover {
+  transition: all variables.$base-duration variables.$base-timing;
+  text-decoration: none;
+  opacity: .6;
+  color: inherit;
+}
+
+.c-card a {
+  color: inherit;
+}
+
+.c-card_img {
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.c-card_img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+
+.c-card_title,
+.c-card_text {
+  margin-bottom: .3rem;
+}
+
+.c-card_title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.c-card_text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/*
+.c-card {
+  display: flex;
+  margin-right: auto;
+  margin-bottom: variables.$base-spacing;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.c-card_link,
+.c-card > a {
+  display: flex;
+  height: 100%;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .c-card {
+    display: block;
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+  .c-card_link,
+  .c-card > a {
+    display: block;
+  }
+}
+
+.c-card_img {
+  width: 120px;
+  min-width: 120px;
+  margin-right: 16px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .c-card_img {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+*/

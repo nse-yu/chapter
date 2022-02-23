@@ -1,0 +1,82 @@
+@use "../core/variables";
+
+
+/* ==========================================================================
+   #VIDEO
+   ========================================================================== */
+/*doc
+---
+title: video
+---
+
+```html_example
+  <div class="e-video-container">
+    <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+```
+*/
+
+.e-video-container {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: variables.$base-spacing;
+  text-align: center;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-video-container {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}
+
+.e-video-container iframe {
+  width: 100%;
+  min-height: 100px;
+}
+
+
+@media only screen and (max-width: variables.$landscape) {
+  .e-video-container iframe {
+    height: 30vh;
+  }
+}
+
+
+/* Google map
+   ========================================================================== */
+
+/*doc
+---
+title: gmap
+---
+
+```html_example
+  <div class="e-map">
+    <iframe src="" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+```
+*/
+
+.e-map {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: variables.$base-spacing;
+  text-align: center;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-map {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}
+
+.e-map iframe {
+  width: 100%;
+  min-height: 100px;
+}
+
+@media only screen and (max-width: variables.$landscape) {
+  .e-map iframe {
+    height: 30vh;
+  }
+}

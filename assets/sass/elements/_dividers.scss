@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "../core/variables";
+
+/* ==========================================================================
+    #divider
+   ========================================================================== */
+
+/*doc
+---
+title: divider
+---
+
+```
+<hr class="e-divider">
+```
+*/
+
+
+.e-divider {
+  margin-bottom: variables.$base-spacing;
+  padding-bottom: 1px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  background: variables.$dividers;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-divider {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}
+

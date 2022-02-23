@@ -1,0 +1,86 @@
+@use "../core/variables";
+
+
+/* ==========================================================================
+   #tag
+   ========================================================================== */
+
+
+/*doc
+---
+title: list-tag
+---
+
+```html_example
+<ul class="e-tag-list">
+  <li><a href="">タグ1</a></li>
+  <li><a href="">タグ2</a></li>
+  <li><a href="">タグ3</a></li>
+  <li><a href="">タグ4</a></li>
+  <li><a href="">タグ5</a></li>
+  <li><a href="">タグ6</a></li>
+</ul>
+```
+*/
+
+.e-tag-list {
+  display: flex;
+  margin-top: -12px;
+  margin-right: -3px;
+  margin-bottom: variables.$base-spacing;
+  margin-left: -3px;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-tag-list {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}
+
+
+.e-tag-list li {
+  margin-top: 12px;
+  margin-right: 3px;
+  margin-left: 3px;
+
+}
+
+.e-tag-list li a {
+  font-size: 12px;
+  line-height: 1.2;
+  display: block;
+  box-sizing: border-box;
+  min-width: 3rem;
+  padding: 7px 12px;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  text-decoration: none !important;
+  color: variables.$primary-text !important;
+  border: solid 1px variables.$dividers;
+  border-radius: variables.$base-radius;
+  background-color: #fff;
+}
+
+.e-tag-list li a::before {
+  margin-right: .2em;
+  content: '#';
+  color: #757575;
+}
+
+
+.e-tag-list li a:hover {
+  text-decoration: none;
+  opacity: .6;
+}
+
+.e-tag-list li a:focus {
+  outline-offset: -3px;
+}
+
+
+
+

@@ -1,0 +1,158 @@
+@use "../core/variables";
+
+/* @  Footer Layout
+ * ------------------------------------------------------------ */
+
+.l-footer {
+  color: #FFFFFF;
+  background-color: variables.$primary-dark-color;
+}
+
+.l-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.l-footer a:hover {
+  text-decoration: underline;
+}
+
+.l-footer_primary {
+  display: flex;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding-right: variables.$base-gap;
+  padding-left: variables.$base-gap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .l-footer_primary {
+    max-width: variables.$main-width;
+    margin-bottom: 16px;
+    padding-top: 28px;
+  }
+}
+
+.l-footer_secondary {
+  padding-top: 13px;
+  padding-right: variables.$base-gap;
+  padding-bottom: 13px;
+  padding-left: variables.$base-gap;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.l-footer_order1-sp {
+  order: 1;
+}
+
+.l-footer_order2-sp {
+  order: 2;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .l-footer_order1-sp,
+  .l-footer_order2-sp {
+    order: initial;
+  }
+}
+
+
+.l-footer_nav {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .l-footer_nav {
+    width: calc(100% - 320px);
+  }
+}
+
+.l-footer_nav-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  display: block;
+  margin-right: -(variables.$base-gap);
+  margin-left: -(variables.$base-gap);
+  padding: 14px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .l-footer_nav-title {
+    display: none;
+  }
+}
+
+.l-footer_nav-body ul {
+  width: 100%;
+  margin-left: 0;
+}
+
+.l-footer_nav-body ul li {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.l-footer_nav-body ul li a {
+  display: block;
+  margin-right: -(variables.$base-gap);
+  margin-left: -(variables.$base-gap);
+  padding: 14px variables.$base-gap;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .l-footer_nav-body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  .l-footer_nav-body ul {
+    box-sizing: border-box;
+    width: 25%;
+    padding-left: 2%;
+  }
+  .l-footer_nav-body ul li {
+    padding-bottom: 15px;
+  }
+  .l-footer_nav-body ul li a {
+    display: initial;
+    margin-right: auto;
+    margin-left: auto;
+    padding: initial;
+    border-bottom-width: 0;
+  }
+}
+
+.l-footer_description {
+  width: 320px;
+  min-width: 320px;
+  margin-bottom: 12px;
+}
+
+.l-footer_description-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 9px;
+}
+
+.l-footer_description-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.l-footer_copy {
+  font-size: 12px;
+  color: rgba(255, 255, 255, .7);
+}
+
+
+

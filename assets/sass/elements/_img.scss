@@ -1,0 +1,136 @@
+@use "../core/variables";
+
+
+/* ==========================================================================
+    # img
+   ========================================================================== */
+
+
+.e-img {
+  margin-right: auto;
+  margin-bottom: variables.$base-spacing;
+  margin-left: auto;
+  text-align: center;
+}
+
+.e-img img {
+  height: auto;
+  width: 100%;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.e-img a {
+  display: block;
+  transition: opacity variables.$base-duration variables.$base-timing;
+}
+
+.e-img a:hover {
+  opacity: .7;
+}
+
+.e-img_caption {
+  margin-top: .5em;
+  color: #757575;
+  font-size: .8em;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-img {
+    text-align: left;
+  }
+}
+
+/* 画像位置 */
+@media only screen and (min-width: variables.$landscape) {
+  .is-img-left {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+/* 画像右 */
+@media only screen and (min-width: variables.$landscape) {
+  .is-img-right {
+    float: right;
+    margin-left: 1rem;
+  }
+}
+
+/* 画像中央 */
+.is-img-center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .is-img-25p {
+    width: 25%;
+  }
+
+  .is-img-25p.is-img-left,
+  .is-img-25p.is-img-right {
+    width: calc(25% - 1rem);
+  }
+
+  .is-img-33p {
+    width: 33.33%;
+  }
+
+  .is-img-50p {
+    width: 50%;
+  }
+
+  .is-img-75p {
+    width: 75%;
+  }
+
+  .is-img-100p {
+    width: 100%;
+  }
+
+  .is-img-clear {
+    clear: both;
+  }
+}
+
+
+/* 画像リスト
+   ========================================================================== */
+
+/*doc
+---
+title: img-list
+---
+
+```html_example
+<ul class="e-img-list">
+  <li><a href=""><img src="/assets/img/dummy/widget.png" width="300" height="70" alt=""> </a></li>
+  <li><a href=""><img src="/assets/img/dummy/widget.png" width="300" height="70" alt=""> </a></li>
+  <li><a href=""><img src="/assets/img/dummy/widget.png" width="300" height="70"" alt=""> </a></li>
+</ul>
+```
+*/
+
+
+.e-img-list {
+  margin-bottom: variables.$base-spacing;
+}
+
+@media only screen and (min-width: variables.$landscape) {
+  .e-img-list {
+    margin-bottom: variables.$base-spacing-landscape;
+  }
+}
+
+.e-img-list li {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.e-img-list img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+

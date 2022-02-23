@@ -1,0 +1,93 @@
+@use "../core/variables";
+
+/* ==========================================================================
+   #breadcrumb
+   ========================================================================== */
+
+
+/*doc
+---
+title: breadcrumb
+---
+
+```
+<div class="c-breadcrumb" role="navigation" aria-label="現在地表示">
+  <div class="c-breadcrumb_inner">
+    <span><a href="/">ホーム</a></span>
+    <span><a href="/category/">カテゴリー</a></span>
+    <span>ページタイトル</span>
+  </div>
+</div>
+
+```
+*/
+
+.c-breadcrumb {
+  padding: 0 variables.$base-gap;
+  border-bottom: 1px solid variables.$dividers;
+}
+
+.c-breadcrumb_inner {
+  font-size: 12px;
+  margin: 13px auto 13px auto;
+  max-width: variables.$main-width;
+
+  /* 画面幅以上の場合は「...」
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  */
+
+  /* 画面幅以上の場合はスクロール
+  overflow-y: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  */
+
+}
+
+.c-breadcrumb_inner::-webkit-scrollbar {
+  /* 画面幅以上の場合はスクロール*/
+  display: none;
+}
+
+.c-breadcrumb_inner i {
+  font-size: 1.125rem;
+  margin-right: -.3em;
+  vertical-align: middle;
+  color: #757575;
+}
+
+.c-breadcrumb_inner a {
+  text-decoration: none;
+  color: variables.$link-text;
+}
+
+.c-breadcrumb_inner a:hover {
+  transition: variables.$base-duration variables.$base-timing;
+  text-decoration: underline;
+  color: variables.$hover-text;
+}
+
+.c-breadcrumb_inner span::before {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 10px;
+  margin-left: 4px;
+  content: '';
+  transform: rotate(45deg);
+  vertical-align: middle;
+  border-style: solid;
+  border-color: variables.$dividers;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.c-breadcrumb_inner span:first-child::before {
+  display: none;
+}
+
